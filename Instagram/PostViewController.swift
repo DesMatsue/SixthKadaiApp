@@ -15,9 +15,9 @@ class PostViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textField: UITextField!
     
-    // 投稿ボタン
-    @IBAction func handlePostButton(_ sender: Any) {
-        // Imageから画像を取得する
+    // 投稿ボタンをタップしたときに呼ばれるメソッド
+    @IBAction func handlePostButton2(_ sender: UIButton) {
+        // ImageViewから画像を取得する
         let imageData = UIImageJPEGRepresentation(imageView.image!, 0.5)
         let imageString = imageData!.base64EncodedString(options: .lineLength64Characters)
         
@@ -36,18 +36,20 @@ class PostViewController: UIViewController {
         // 全てのモーダルを閉じる
         UIApplication.shared.keyWindow?.rootViewController?.dismiss(animated: true, completion: nil)
     }
-    // キャンセルボタン
-    @IBAction func handleCancelButton(_ sender: Any) {
-    }
     
+    // キャンセルボタンをタップしたときに呼ばれるメソッド
+    @IBAction func handleCancelButton(_ sender: Any) {
+        // 画面を閉じる
+        dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // 受け取った画像をImageViewに設定する
+        
+        // フォトライブラリやカメラから受け取った画像をImageViewに設定する
         imageView.image = image
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

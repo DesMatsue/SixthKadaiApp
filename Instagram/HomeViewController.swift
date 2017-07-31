@@ -111,6 +111,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // セル内のボタンのアクションをソースコードで設定する
         cell.likeButton.addTarget(self, action:#selector(handleButton(sender:event:)), for:  UIControlEvents.touchUpInside)
         
+        // セル内のテキストフィールドの変更をハンドリング
+        cell.textField.addTarget(self,action:#selector(handleText(sender:event:)),for: .editingDidEndOnExit)
+        cell.textField.tag = indexPath.row
+        
         return cell
     }
     
@@ -159,5 +163,27 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             postRef.updateChildValues(likes)
             
         }
+    }
+    
+    // セル内のtextFieldの入力をハンドリングする
+    func handleText(sender: UITextField, event:UIEvent) {
+        print("DEBUG_PRINT: TextFieldがタップされました。")
+        
+        // タップされたセルのインデックスを求める
+        let index = sender.tag
+        
+        // 配列からタップされたインデックスのデータを取り出す
+        let postData = postArray[index]
+        
+        // 増えたlikesをFirebaseに保存する
+        let postRef = FIRDatabase.database().reference().child(Const.PostPath).child(postData.id!)
+        postData.comments.append(sender.text!)
+        let comments = ["comments": postData.comments]
+        postRef.updateChildValues(comments)
+        
+        // テキストを空白へ変更
+        sender.text = ""
+        
+        tableView.reloadData()
     }
 }

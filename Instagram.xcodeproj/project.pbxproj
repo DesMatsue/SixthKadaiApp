@@ -28,6 +28,8 @@
 		EB3285B41F2AB6C600DD97D1 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3285B31F2AB6C600DD97D1 /* PostData.swift */; };
 		EB3285B71F2ABB2900DD97D1 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3285B51F2ABB2900DD97D1 /* PostTableViewCell.swift */; };
 		EB3285B81F2ABB2900DD97D1 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB3285B61F2ABB2900DD97D1 /* PostTableViewCell.xib */; };
+		EB7CCCE61F2EF7DD009F53C5 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7CCCE41F2EF7DD009F53C5 /* TableViewCell.swift */; };
+		EB7CCCE71F2EF7DD009F53C5 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB7CCCE51F2EF7DD009F53C5 /* TableViewCell.xib */; };
 		EBCB02CA1F27270D00AADD5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCB02C91F27270D00AADD5E /* AppDelegate.swift */; };
 		EBCB02CC1F27270D00AADD5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCB02CB1F27270D00AADD5E /* ViewController.swift */; };
 		EBCB02CF1F27270D00AADD5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBCB02CD1F27270D00AADD5E /* Main.storyboard */; };
@@ -79,6 +81,8 @@
 		EB3285B31F2AB6C600DD97D1 /* PostData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		EB3285B51F2ABB2900DD97D1 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		EB3285B61F2ABB2900DD97D1 /* PostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		EB7CCCE41F2EF7DD009F53C5 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		EB7CCCE51F2EF7DD009F53C5 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		EBCB02C61F27270D00AADD5E /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBCB02C91F27270D00AADD5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBCB02CB1F27270D00AADD5E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 				EBCB02E11F2728A900AADD5E /* PostViewController.swift */,
 				EB3285B31F2AB6C600DD97D1 /* PostData.swift */,
 				EB3285B51F2ABB2900DD97D1 /* PostTableViewCell.swift */,
+				EB7CCCE41F2EF7DD009F53C5 /* TableViewCell.swift */,
+				EB7CCCE51F2EF7DD009F53C5 /* TableViewCell.xib */,
 				EB3285B61F2ABB2900DD97D1 /* PostTableViewCell.xib */,
 				EBCB02E31F2728B400AADD5E /* SettingViewController.swift */,
 				EBCB02CD1F27270D00AADD5E /* Main.storyboard */,
@@ -256,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBCB02D41F27270D00AADD5E /* LaunchScreen.storyboard in Resources */,
+				EB7CCCE71F2EF7DD009F53C5 /* TableViewCell.xib in Resources */,
 				EB3285B81F2ABB2900DD97D1 /* PostTableViewCell.xib in Resources */,
 				EB1A61B21F281F590002ABF1 /* GoogleService-Info.plist in Resources */,
 				EBCB02D11F27270D00AADD5E /* Assets.xcassets in Resources */,
@@ -337,6 +344,7 @@
 				EBCB02CC1F27270D00AADD5E /* ViewController.swift in Sources */,
 				EBCB02CA1F27270D00AADD5E /* AppDelegate.swift in Sources */,
 				EBCB02E01F27289B00AADD5E /* ImageSelectViewController.swift in Sources */,
+				EB7CCCE61F2EF7DD009F53C5 /* TableViewCell.swift in Sources */,
 				EB3285B21F2AB27F00DD97D1 /* Const.swift in Sources */,
 				EB3285B71F2ABB2900DD97D1 /* PostTableViewCell.swift in Sources */,
 				EBCB02E41F2728B400AADD5E /* SettingViewController.swift in Sources */,

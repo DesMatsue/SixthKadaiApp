@@ -132,19 +132,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="AZq-G2-vGx" firstAttribute="top" secondItem="VKx-sg-Kvk" secondAttribute="bottom" constant="25" id="1qt-P0-uMz"/>
-                            <constraint firstItem="VKx-sg-Kvk" firstAttribute="top" secondItem="ug7-dH-fT4" secondAttribute="top" id="dJA-Wn-mex"/>
-                            <constraint firstItem="VKx-sg-Kvk" firstAttribute="leading" secondItem="ug7-dH-fT4" secondAttribute="leading" id="fl9-D4-juL"/>
-                            <constraint firstAttribute="trailing" secondItem="VKx-sg-Kvk" secondAttribute="trailing" id="pGK-GB-Nzm"/>
+                            <constraint firstAttribute="trailing" secondItem="VKx-sg-Kvk" secondAttribute="trailing" id="IWf-G5-tpj"/>
+                            <constraint firstItem="VKx-sg-Kvk" firstAttribute="leading" secondItem="ug7-dH-fT4" secondAttribute="leading" id="KvX-KW-Nsh"/>
+                            <constraint firstItem="AZq-G2-vGx" firstAttribute="top" secondItem="VKx-sg-Kvk" secondAttribute="bottom" constant="25" id="am4-mc-bPe"/>
+                            <constraint firstItem="VKx-sg-Kvk" firstAttribute="top" secondItem="ug7-dH-fT4" secondAttribute="top" id="tPN-oI-vbx"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="VKx-sg-Kvk" id="TBd-zw-GdP"/>
+                        <outlet property="tableView" destination="VKx-sg-Kvk" id="ZT3-3A-d5G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6tr-YE-yFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1700" y="885"/>
+            <point key="canvasLocation" x="1700" y="884.70764617691157"/>
         </scene>
         <!--Image Select View Controller-->
         <scene sceneID="8K3-Gt-wbT">
@@ -236,7 +236,7 @@
                                 </constraints>
                                 <state key="normal" title="投稿" backgroundImage="btn"/>
                                 <connections>
-                                    <action selector="handlePostButton:" destination="XhY-pu-bKh" eventType="touchUpInside" id="GXj-vN-hMB"/>
+                                    <action selector="handlePostButton2:" destination="XhY-pu-bKh" eventType="touchUpInside" id="Qbo-cz-eLP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dc7-l2-2Bc">
