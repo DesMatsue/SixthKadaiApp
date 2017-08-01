@@ -10,6 +10,7 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
     @IBOutlet weak var textField: UILabel!
+    @IBOutlet weak var userName: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,8 +18,9 @@ class TableViewCell: UITableViewCell {
     }
     
     // テーブルへラベル文字列を設定する
-    func setLabel(_ text: String){
-        textField.text = text
+    func setLabel(commentBy comment: String, messageText message: String){
+        self.userName.text = comment
+        textField.text = message
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -168,6 +168,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // セル内のtextFieldの入力をハンドリングする
     func handleText(sender: UITextField, event:UIEvent) {
         print("DEBUG_PRINT: TextFieldがタップされました。")
+        let userInfo = FIRAuth.auth()?.currentUser!
+        
         
         // タップされたセルのインデックスを求める
         let index = sender.tag
@@ -175,9 +177,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // 配列からタップされたインデックスのデータを取り出す
         let postData = postArray[index]
         
-        // 増えたlikesをFirebaseに保存する
+        // 増えたCommentをFirebaseに保存する
         let postRef = FIRDatabase.database().reference().child(Const.PostPath).child(postData.id!)
-        postData.comments.append(sender.text!)
+        postData.comments.append(sender.text!+","+(userInfo?.displayName)!)
         let comments = ["comments": postData.comments]
         postRef.updateChildValues(comments)
         

@@ -83,7 +83,13 @@ class PostTableViewCell: UITableViewCell,UITableViewDelegate,UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath) as! TableViewCell
         
         // cellに値を設定
-        cell.setLabel(comments[indexPath.row])
+        let comment = comments[indexPath.row].components(separatedBy: ",")
+        if comment.count > 1{
+            cell.setLabel(commentBy: comment[1], messageText: comment[0])
+        }else{
+            cell.setLabel(commentBy: "anonymous", messageText: comment[0])
+        }
+        
         return cell
     }
     

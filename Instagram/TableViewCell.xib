@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,8 +19,17 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Whg-JM-7gJ">
-                        <rect key="frame" x="10" y="0.0" width="310" height="44"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Whg-JM-7gJ">
+                        <rect key="frame" x="0.0" y="0.0" width="42" height="44"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddI-xC-Cko">
+                        <rect key="frame" x="212" y="12" width="100" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="2L6-Os-Ac8"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -27,14 +37,17 @@
                 </subviews>
                 <color key="backgroundColor" red="0.87690420869999997" green="0.87690420869999997" blue="0.87690420869999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstItem="Whg-JM-7gJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0dK-WC-WoO"/>
-                    <constraint firstItem="Whg-JM-7gJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="CVb-yI-L50"/>
-                    <constraint firstAttribute="bottom" secondItem="Whg-JM-7gJ" secondAttribute="bottom" id="KfT-HD-EjE"/>
-                    <constraint firstAttribute="trailing" secondItem="Whg-JM-7gJ" secondAttribute="trailing" id="jQT-9K-yu1"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ddI-xC-Cko" secondAttribute="trailing" id="8Jr-CR-BL0"/>
+                    <constraint firstItem="Whg-JM-7gJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="gFw-5u-qai"/>
+                    <constraint firstItem="ddI-xC-Cko" firstAttribute="centerY" secondItem="Whg-JM-7gJ" secondAttribute="centerY" id="qci-ea-O7l"/>
+                    <constraint firstAttribute="bottom" secondItem="Whg-JM-7gJ" secondAttribute="bottom" id="tjv-y1-Vsg"/>
+                    <constraint firstItem="ddI-xC-Cko" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="uaS-pg-Ixf"/>
+                    <constraint firstItem="Whg-JM-7gJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="zpF-mC-AHY"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="textField" destination="Whg-JM-7gJ" id="lD3-lx-dNL"/>
+                <outlet property="userName" destination="ddI-xC-Cko" id="TqS-Jg-6E1"/>
             </connections>
         </tableViewCell>
     </objects>
